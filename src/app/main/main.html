@@ -1,0 +1,32 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-12">
+      <label for="greeting">Say "Hello Kitty"</label>
+      <input id="greeting" ng-model="someText" ng-change="change()">
+
+      <div>
+        <label>One time</label>
+        <span>{{::someText}}</span>
+      </div>
+      <div>
+        <label>Two way</label>
+        <span ng-bind="someText"></span>
+      </div>
+
+      <hr>
+      <div class="text-center" ng-bind-html="someHtml"></div>
+      <hr>
+
+      <div class="picture-block col-xs-4 text-center" my-repeat="item in array">
+        <div>
+          <span>{{item.num}}</span>
+          <span>{{item.name}}</span>
+        </div>
+        <img class="col-xs-12" ng-if="item.src" ng-src="{{item.src}}"/>
+
+      </div>
+    </div>
+  </div>
+
+</div>
